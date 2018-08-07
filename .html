@@ -1,0 +1,36 @@
+<div class="challengeDoubleSlider">
+
+  <div id='lineDoubleSlider' #lineDoubleSlider>
+
+    <div id="minSign" (mousedown)="onmousedown($event)" (window:mouseup)="onmouseup()" (window:mousemove)="onmousewheel($event)" #minSign> <!-- sign for minimum number -->
+      <svg width="30px" height="40px" viewbox="0 0 30 42">
+        <path fill="transparent" stroke="#008080" stroke-width="1.5"
+              d="M15 3
+           Q16.5 6.8 25 18
+           A12.8 12.8 0 1 1 5 18
+           Q13.5 6.8 15 3z"/>
+      </svg>
+    </div>
+
+    <div id="maxSign" #maxSign (mousedown)="onmousedownMax($event)" (window:mouseup)="onmouseupMax()" (window:mousemove)="onmousewheelMax($event)" #minSign> <!-- sign for maximum number -->
+      <svg width="30px" height="40px" viewbox="0 0 30 42">
+        <path fill="transparent" stroke="#5f4b8b" stroke-width="1.5"
+              d="M15 3
+           Q16.5 6.8 25 18
+           A12.8 12.8 0 1 1 5 18
+           Q13.5 6.8 15 3z"/>
+      </svg>
+    </div>
+  </div>
+
+  <div id="showMinNum">  <!-- show minimum number -->
+    min: <span id="minNumber" #minNumber>{{minAmount}}</span>
+  </div>
+  <div id="showMaxNum">  <!-- show maximum number -->
+    max: <span id="maxNumber" #maxNumber>{{maxAmount}}</span>
+  </div>
+
+</div>
+
+
+
